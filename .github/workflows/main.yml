@@ -1,6 +1,10 @@
 name: Hello World on Push
 
-on: push
+on:
+  push:
+    branches:
+      - master
+      - updatingMdFile
 
 jobs:
   run:
