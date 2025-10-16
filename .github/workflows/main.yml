@@ -7,8 +7,13 @@ on:
       - updatingMdFile
 
 jobs:
-  run:
+  first_job:
     runs-on: windows-latest
-
     steps:
-      - run: echo "Hello World"
+      - run: echo "Hellow World"
+
+  second_job:
+    runs-on: windows-latest
+    needs: first_job
+    steps:
+      - run: echo "Hellow World 2"
